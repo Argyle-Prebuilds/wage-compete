@@ -2,6 +2,7 @@
 A production version of this app can be accessed at https://wagecompete.com/
 
 ![Home](/screenshots/home.png?raw=true "Homepage screenshot")
+![Compate](/screenshots/compare.png?raw=true "Compare screenshot")
 
 ## How to set up and run the app locally:
 
