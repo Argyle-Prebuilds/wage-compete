@@ -1,6 +1,14 @@
 # Wage Compete
 A production version of this app can be accessed at https://wagecompete.com/
 
+Need help setting this up, or want someone to do it for you? Visit https://scopeinc.com/vendors/argyle to be matched with an Argyle Expert. 
+
+## App Features and Use Cases
+Wage Compete is an example application for a company who is looking to:
+1. Create an easy experience for users to link their employment accounts by invoking data partners
+2. Give an informative post-link user experience by displaying Argyle Payout data
+3. Build a simple MVP FinTech app with Argyle link to test opt-in, conversion funnels, and value propositions
+
 ### Homepage Screenshot
 ![Home](/screenshots/home.png)
 ### Compare Screenshot (after Argyle Link) 
