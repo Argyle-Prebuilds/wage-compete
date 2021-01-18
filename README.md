@@ -2,9 +2,9 @@
 A production version of this app can be accessed at https://wagecompete.com/
 
 ### Homepage Screenshot
-![Home](/screenshots/home.png width=300)
+![Home](/screenshots/home.png)
 ### Compare Screenshot (after Argyle Link) 
-![Compate](/screenshots/compare.png width=300)
+![Compate](/screenshots/compare.png)
 
 ## How to set up and run the app locally:
 
