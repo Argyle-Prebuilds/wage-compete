@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="See how you rank against your peers" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Wage Compete</title>
+    <script src="../argyle.js"></script>
+  </head>
+  <body style="background-color: rgb(255, 255, 255);">
+    <script type="text/javascript">
+      window.initArgyle = (dataPartners = [], token = null) => {
+        const userTokenObj = token ? { userToken: token } : {};
+        return Argyle.create({
+          pluginKey: '%REACT_APP_PLUGIN_KEY%',
+          apiHost: '%REACT_APP_API_URL%',
+          dataPartners,
+          ...userTokenObj,
+          onUserCreated: ({ userId, userToken }) => {
+            console.log('User created: ', userId);
+            localStorage.setItem("jwtToken", userToken);
+            window.userCreated({ userToken, userId })
+          },
+          onAccountConnected: ({ accountId, userId }) => {
+            window.accountCreated({ accountId, userId })
+          }
+        });
+      };
+
+       window.onOpenPlugin = (providers) => {
+        const token = localStorage.getItem("jwtToken");
+        window.initArgyle(providers, token).open();
+      };
+
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+    </div>
+  </body>
+</html>
